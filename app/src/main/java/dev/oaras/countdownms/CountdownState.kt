@@ -31,8 +31,8 @@ class CountdownViewModel(context: Context) : ViewModel() {
 
     private val calendar: Calendar = Calendar.getInstance()
 
-
     var data: CountdownData? by mutableStateOf(getSavedData())
+        private set
 
     @JvmName("setDataInternal")
     fun setData(data: CountdownData) {
@@ -63,7 +63,7 @@ class CountdownViewModel(context: Context) : ViewModel() {
 
     fun setTarget(context: Context, year: Int, month: Int, dayOfMonth: Int) {
         //Get milliseconds from target date
-        calendar.set(year, month - 1, dayOfMonth, 0, 0, 0)
+        calendar.set(year, month, dayOfMonth, 0, 0, 0)
         val targetMs = calendar.timeInMillis
 
         val newData = CountdownData(

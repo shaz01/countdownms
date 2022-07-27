@@ -46,15 +46,3 @@ fun Progress(
         }
     }
 }
-
-//@Preview
-//@Composable
-//fun ProgressPreview() {
-//    Progress(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(64.dp),
-//
-//        data = CountdownData(509056093505, 999999999999999)
-//    )
-//}

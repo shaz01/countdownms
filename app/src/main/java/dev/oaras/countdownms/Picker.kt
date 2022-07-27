@@ -24,7 +24,7 @@ fun Picker(
         { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
             vm.setTarget(context, year, month, dayOfMonth)
         },
-        vm.year, vm.month, vm.day
+        vm.year, vm.month-1, vm.day
     )
     OutlinedTextField(
         modifier = modifier.clickable { dialog.show() },
